@@ -7,3 +7,13 @@ E:\工作\c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\Windows
 E:\工作\c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 E:\工作\c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
 E:\工作\c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+E:\工作\c#\upper-monitor\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+E:\工作\c#\upper-monitor\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+E:\工作\c#\upper-monitor\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+E:\工作\c#\upper-monitor\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+E:\工作\c#\upper-monitor\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+E:\工作\c#\upper-monitor\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+E:\工作\c#\upper-monitor\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+E:\工作\c#\upper-monitor\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\工作\c#\upper-monitor\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+E:\工作\c#\upper-monitor\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.UserControl1.resources
