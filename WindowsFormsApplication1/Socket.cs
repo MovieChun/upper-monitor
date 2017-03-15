@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Windows.Forms;
+using System.Drawing;
+
 
 namespace WindowsFormsApplication1
 {
@@ -17,6 +19,8 @@ namespace WindowsFormsApplication1
         int Port;
         public String ReData;
         byte[] buffer = new byte[128] ;
+        public int flag = 0;
+        
 
        public  MySocket(String ip, int port)
         {
@@ -43,21 +47,25 @@ namespace WindowsFormsApplication1
 
         }
 
-        public int Receive(){
+        public void Receive(){
             //接收连接请求  
             Socket remoteSock = S.AcceptSocket();
-            try
+            while (true)
             {
-                remoteSock.Receive(buffer);
-                ReData = Encoding.ASCII.GetString(buffer);
-                return 1;
+                try
+                {
+                    remoteSock.Receive(buffer);
+                    ReData = Encoding.Default.GetString(buffer);
+                    flag = 1;
+                    
+                }
+                catch (SocketException e)
+                {
+                    MessageBox.Show(e.Message);
+                    remoteSock.Close();
+                    break;
+                }
             }
-            catch(SocketException e){
-                MessageBox.Show(e.Message);
-                remoteSock.Close();
-                return 0;
-            }
-
            
         }
        public void Stop()

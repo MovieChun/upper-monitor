@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.IPTextBox = new System.Windows.Forms.TextBox();
             this.PortTextBox = new System.Windows.Forms.TextBox();
             this.ReceiveTextBox = new System.Windows.Forms.TextBox();
@@ -40,6 +41,9 @@
             this.SendButton = new System.Windows.Forms.Button();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.BeginButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ClineIPTextBox = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // IPTextBox
@@ -48,6 +52,7 @@
             this.IPTextBox.Name = "IPTextBox";
             this.IPTextBox.Size = new System.Drawing.Size(134, 21);
             this.IPTextBox.TabIndex = 1;
+            this.IPTextBox.Text = "192.168.31.102";
             // 
             // PortTextBox
             // 
@@ -55,6 +60,7 @@
             this.PortTextBox.Name = "PortTextBox";
             this.PortTextBox.Size = new System.Drawing.Size(125, 21);
             this.PortTextBox.TabIndex = 2;
+            this.PortTextBox.Text = "3000";
             // 
             // ReceiveTextBox
             // 
@@ -67,6 +73,7 @@
             this.ReceiveTextBox.Name = "ReceiveTextBox";
             this.ReceiveTextBox.Size = new System.Drawing.Size(446, 213);
             this.ReceiveTextBox.TabIndex = 3;
+            this.ReceiveTextBox.Leave += new System.EventHandler(this.ReceiveTextBox_Leave);
             // 
             // label1
             // 
@@ -167,11 +174,34 @@
             this.BeginButton.UseVisualStyleBackColor = true;
             this.BeginButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(374, 395);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 12);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "目标IP";
+            // 
+            // ClineIPTextBox
+            // 
+            this.ClineIPTextBox.Location = new System.Drawing.Point(421, 392);
+            this.ClineIPTextBox.Name = "ClineIPTextBox";
+            this.ClineIPTextBox.Size = new System.Drawing.Size(134, 21);
+            this.ClineIPTextBox.TabIndex = 12;
+            this.ClineIPTextBox.Text = "192.168.31.102";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 425);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.ClineIPTextBox);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.SendButton);
             this.Controls.Add(this.SendLabel);
@@ -186,6 +216,7 @@
             this.Controls.Add(this.BeginButton);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,6 +236,9 @@
         private System.Windows.Forms.Button SendButton;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Button BeginButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox ClineIPTextBox;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
