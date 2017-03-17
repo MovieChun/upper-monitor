@@ -71,7 +71,7 @@
             this.ReceiveTextBox.Location = new System.Drawing.Point(231, 22);
             this.ReceiveTextBox.Multiline = true;
             this.ReceiveTextBox.Name = "ReceiveTextBox";
-            this.ReceiveTextBox.Size = new System.Drawing.Size(446, 213);
+            this.ReceiveTextBox.Size = new System.Drawing.Size(212, 213);
             this.ReceiveTextBox.TabIndex = 3;
             this.ReceiveTextBox.Leave += new System.EventHandler(this.ReceiveTextBox_Leave);
             // 
@@ -115,7 +115,7 @@
             this.SendTextBox.Location = new System.Drawing.Point(231, 293);
             this.SendTextBox.Multiline = true;
             this.SendTextBox.Name = "SendTextBox";
-            this.SendTextBox.Size = new System.Drawing.Size(446, 79);
+            this.SendTextBox.Size = new System.Drawing.Size(212, 79);
             this.SendTextBox.TabIndex = 7;
             // 
             // ReceiveLabel
@@ -143,7 +143,7 @@
             // SendButton
             // 
             this.SendButton.Font = new System.Drawing.Font("华文行楷", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.SendButton.Location = new System.Drawing.Point(586, 381);
+            this.SendButton.Location = new System.Drawing.Point(384, 390);
             this.SendButton.Name = "SendButton";
             this.SendButton.Size = new System.Drawing.Size(91, 32);
             this.SendButton.TabIndex = 10;
@@ -177,7 +177,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(374, 395);
+            this.label3.Location = new System.Drawing.Point(187, 401);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 12);
             this.label3.TabIndex = 13;
@@ -185,7 +185,7 @@
             // 
             // ClineIPTextBox
             // 
-            this.ClineIPTextBox.Location = new System.Drawing.Point(421, 392);
+            this.ClineIPTextBox.Location = new System.Drawing.Point(234, 395);
             this.ClineIPTextBox.Name = "ClineIPTextBox";
             this.ClineIPTextBox.Size = new System.Drawing.Size(134, 21);
             this.ClineIPTextBox.TabIndex = 12;
@@ -199,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 425);
+            this.ClientSize = new System.Drawing.Size(483, 425);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ClineIPTextBox);
             this.Controls.Add(this.checkBox2);
@@ -216,6 +216,7 @@
             this.Controls.Add(this.BeginButton);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

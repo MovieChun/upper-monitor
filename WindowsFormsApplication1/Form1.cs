@@ -22,6 +22,7 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
+            SendTextBox.Text += '1';
         }
 
         void RShow()
@@ -46,6 +47,7 @@ namespace WindowsFormsApplication1
                 SA = new MySocket(IPTextBox.Text, int.Parse(PortTextBox.Text));
                 if (SA.Listener() == 1)
                 {
+                    SA.start = 1;
                     thread = new Thread(new ThreadStart(SA.Receive));
                     thread.Start();
                     begin_flag = 1;
@@ -54,7 +56,9 @@ namespace WindowsFormsApplication1
             }
 
             else
-            {   SA.Stop();
+            {
+                SA.start = 0;
+                SA.Stop();
                 thread.DisableComObjectEagerCleanup();
                 
                 begin_flag = 0; 
@@ -78,6 +82,7 @@ namespace WindowsFormsApplication1
         {
             timer1.Enabled = true;
             timer1.Interval = 20;  //20ms
+            
         }
 
         private void ReceiveTextBox_Leave(object sender, EventArgs e)
@@ -95,6 +100,11 @@ namespace WindowsFormsApplication1
                 //SA.ReData = "";
             }
             timer1.Enabled = true;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(thread != null)thread.DisableComObjectEagerCleanup();
         }
         
     }
