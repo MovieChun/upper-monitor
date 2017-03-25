@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 
+using System.Net;
+using System.Net.Sockets;
+
 namespace WindowsFormsApplication1
 {
    
@@ -22,7 +25,7 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             InitializeComponent();
-            SendTextBox.Text += '1';
+          
         }
 
         void RShow()
@@ -47,7 +50,7 @@ namespace WindowsFormsApplication1
                 SA = new MySocket(IPTextBox.Text, int.Parse(PortTextBox.Text));
                 if (SA.Listener() == 1)
                 {
-                    SA.start = 1;
+                   
                     thread = new Thread(new ThreadStart(SA.Receive));
                     thread.Start();
                     begin_flag = 1;
@@ -57,7 +60,6 @@ namespace WindowsFormsApplication1
 
             else
             {
-                SA.start = 0;
                 SA.Stop();
                 thread.DisableComObjectEagerCleanup();
                 
@@ -93,11 +95,11 @@ namespace WindowsFormsApplication1
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Enabled = false;
-            if (begin_flag==1 && SA.flag == 1)
+            if (begin_flag==1 && SA != null)
             {
                 SA.flag = 0;
                 ReceiveTextBox.Text +=  SA.ReData;
-                //SA.ReData = "";
+                SA.ReData = "";
             }
             timer1.Enabled = true;
         }
@@ -106,6 +108,6 @@ namespace WindowsFormsApplication1
         {
             if(thread != null)thread.DisableComObjectEagerCleanup();
         }
-        
+
     }
 }
